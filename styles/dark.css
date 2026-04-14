@@ -1,12 +1,85 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+.header__rec-label {
+  margin-right: 9px;
+  min-width: 52px;
+  min-height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+  color: var(--header-element);
+  font-family: var(--font-family), monospace;
+  font-size: var(--basic-font-size);
+  align-self: start;
+  justify-self: end;
+}
+
+.header__rec-label::after{
+  display: block;
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: var(--header-element);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 3px #FF0070;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background-color: #000028;
+    --header-footer-title-color: #DB00FF;
+    --header-menu-list-hover: #660045;
+    --text-shadow: #FF0070;
+    --header-element: #FF0070;
+    --section-title-color: #FF0070;
+    --content-text-color: #F1B2CE;
+    --content-title-color: #000028;
+    --container-accent-color: #FF0070;
+    --cover-image: url("../images/cover-image-dark.png");  
+    --footer-title-color: #DB00FF;
+  }
+  
+  .header__rec-label {
+    display: inline-flex;
+  }
+
+  .header__rec-label::after {
+    display: block;
+  }
+
+  .header__theme-menu-list > :nth-child(2) {
+    border: var(--header-element) solid 1px;
+  }
+}
 
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --main-element-color: #FF0070;
+  --page-background-color: #000028;
+  --header-footer-title-color: #DB00FF;
+  --header-menu-list-hover: #660045;
+  --text-shadow: var(--main-element-color);
+  --header-element: var(--main-element-color);
+  --section-title-color: var(--main-element-color);
+  --content-text-color: #F1B2CE;
+  --content-title-color: #000028;
+  --container-accent-color: var(--main-element-color);
+  --cover-image: url("../images/cover-image-dark.png");  
+  --footer-title-color: #DB00FF;
 }
+
+:root.theme-dark .header__rec-label {
+  display: inline-flex;
+}
+
+:root.theme-dark .header__rec-label::after{
+  display: block;
+}
+
+:root.theme-dark .header__theme-menu-list > :nth-child(2){
+  border: none;
+}
+
+:root.theme-dark .header__theme-menu-list > :nth-child(3){
+  border: var(--header-element) solid 1px;
+}
+
