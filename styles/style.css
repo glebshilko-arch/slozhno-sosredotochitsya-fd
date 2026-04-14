@@ -124,12 +124,6 @@
   color: var(--content-text-color);
 }
 
-.section__content-text {
-  font-family: var(--font-family), monospace;
-  font-size: var(--basic-font-size);
-  color: var(--content-text-color);
-}
-
 .section__content-link {
   text-shadow: 2px 1px 0 var(--text-shadow);
   text-decoration: none;
@@ -296,7 +290,7 @@
     align-self: center;
   }
 
-  .header__theme-menu-list{
+  .header__theme-menu-list {
     align-self: start;
     justify-self: center;
     flex-direction: row;

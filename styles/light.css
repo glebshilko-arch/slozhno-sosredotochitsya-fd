@@ -40,10 +40,10 @@
     display: none;
 }
 
-:root.theme-light .header__theme-menu-list > :nth-child(1){
+:root.theme-light .header__theme-menu-list > :nth-child(1) {
   border: var(--header-element) solid 1px;
 }
 
-:root.theme-light .header__theme-menu-list > :nth-child(2){
+:root.theme-light .header__theme-menu-list > :nth-child(2) {
   border: none;
 }

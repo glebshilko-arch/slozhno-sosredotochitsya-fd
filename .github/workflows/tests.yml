@@ -20,3 +20,15 @@ jobs:
         uses: Yandex-Practicum/test-project-action@v1
         with:
           project: 'slozhno-sosredotochitsya-fd'
+
+- name: Upload Screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: autotest-screenshots
+          path: |
+            /var/tmp/source/outputs/output-1024.jpg
+            /var/tmp/source/outputs/output-375.jpg
+            /var/tmp/source/outputs/output-768.jpg
+            /var/tmp/source/outputs/output-dark.jpg
+          if-no-files-found: warn

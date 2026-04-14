@@ -14,7 +14,7 @@
   justify-self: end;
 }
 
-.header__rec-label::after{
+.header__rec-label::after {
   display: block;
   content: "";
   width: 9px;
@@ -38,7 +38,7 @@
     --cover-image: url("../images/cover-image-dark.png");  
     --footer-title-color: #DB00FF;
   }
-  
+
   .header__rec-label {
     display: inline-flex;
   }
@@ -71,15 +71,15 @@
   display: inline-flex;
 }
 
-:root.theme-dark .header__rec-label::after{
+:root.theme-dark .header__rec-label::after {
   display: block;
 }
 
-:root.theme-dark .header__theme-menu-list > :nth-child(2){
+:root.theme-dark .header__theme-menu-list > :nth-child(2) {
   border: none;
 }
 
-:root.theme-dark .header__theme-menu-list > :nth-child(3){
+:root.theme-dark .header__theme-menu-list > :nth-child(3) {
   border: var(--header-element) solid 1px;
 }
 
