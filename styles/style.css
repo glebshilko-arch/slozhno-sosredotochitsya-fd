@@ -10,11 +10,11 @@
 
 .header {
   position: relative;
-  padding: var(--main-padding);
   height: 100vh;
   min-height: 668px;
   display: grid;
   max-width: 100%;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .decorated-zone::before,
@@ -31,16 +31,18 @@
   top: 0;
   right: 0;
   border-width: 1px 1px 0 0;
-  top: var(--main-padding);
-  right: var(--main-padding);
 }
 
 .decorated-zone::after {
   bottom: 0;
   left: 0;
   border-width: 0 0 1px 1px;
-  bottom: var(--main-padding);
-  left: var(--main-padding);
+}
+
+.header__theme-menu {
+  align-self: center;
+  display: flex;
+  justify-self: end;
 }
 
 .header__theme-menu-list {
@@ -53,7 +55,6 @@
   font-family: var(--font-family), monospace;
   font-size: 18px;
   color: var(--header-element);
-  justify-self: end;
 }
 
 .header__theme-menu-item {
@@ -66,10 +67,6 @@
   border: none;
   width: 100%;
   height: 100%;
-}
-
-.header__theme-menu-button:active {
-  pointer-events: none
 }
 
 .header__theme-menu-button:hover {
@@ -85,7 +82,11 @@
   font-family: var(--font-family), monospace;
   font-size: var(--header-footer-title-size);
   color: var(--header-footer-title-color);
+  line-height: var(--line-heigt-title);
   text-shadow: 4px 4px 0 var(--text-shadow);
+  display: flex;
+  align-self: start;
+  margin-top: 2%;
 }
 
 .accent-title-decoration {
@@ -93,12 +94,20 @@
   font-size: var(--basic-font-size);
   color: var(--content-title-color);
   background-color: var(--container-accent-color);
+  line-height: var(----line-heigt-text);
   font-weight: bold;
   height: min-content;
 }
 
+.header__text {
+  display: flex;
+  align-self: start;
+  margin-top: 8%;
+}
+
 .content {
-  padding-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   display: grid;
   width: 100%;
   gap: 50px;
@@ -110,11 +119,11 @@
   gap: 20px;
 }
 
-
 .section__title {
   font-family: var(--font-family), monospace;
   font-size: var(--basic-font-size);
   color: var(--section-title-color);
+  line-height: var(----line-heigt-text);
 }
 
 .section__content-text {
@@ -122,6 +131,7 @@
   font-family: var(--font-family), monospace;
   font-size: var(--basic-font-size);
   color: var(--content-text-color);
+  line-height: var(----line-heigt-text);
 }
 
 .section__content-link {
@@ -145,6 +155,7 @@
   font-size: var(--basic-font-size);
   color: var(--content-title-color);
   background-color: var(--container-accent-color);
+  line-height: var(----line-heigt-text);
   font-weight: normal;
 }
 
@@ -175,19 +186,30 @@
   font-family: var(--font-family), monospace;
   font-size: var(--header-footer-title-size);
   color: var(--header-footer-title-color);
-  text-shadow: 2px 2px 0 var(--text-shadow);;
+  text-shadow: 2px 2px 0 var(--text-shadow);
+  line-height: var(----line-heigt-title);
 }
 
 @media (min-width: 768px) {
+  .header__theme-menu {
+    margin-top: 14%;
+  }
+
+  .header__title {
+    margin-left: -20px;
+    margin-top: 14%;
+  }
 
   .header__text {
     width: 50%;
-    justify-self: end
+    justify-self: end;
+    margin-top: 2.8%;
   }
 
   .content {
-    padding-top: 60px;
+    margin-top: 40px;
     gap: 80px;
+    margin-bottom: 60px;
   }
 
   .content-section {
@@ -221,7 +243,7 @@
 
   .image-container {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: min-content repeat(3, 1fr);
+    grid-template-rows: repeat(3, max-content);
     gap: 20px;
   }
 
@@ -232,7 +254,7 @@
     display: block; 
   }
 
-.image-container > :nth-child(1) {
+  .image-container > :nth-child(1) {
     grid-column: 1 / 4;
     grid-row: 1;
   }
@@ -264,36 +286,29 @@
 }
 
 @media (min-width: 1024px) {
-  .header {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 2fr 1fr 2fr;
-  }
-
-  .header > :nth-child(1) {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .header > :nth-child(2) {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .header > :nth-child(3) {
-    grid-column: 1 / 4;
-    grid-row: 2;
-  }
-
-  .header > :nth-child(4) {
-    grid-column: 1 / 4;
-    grid-row: 3;
-    align-self: center;
+  .header__theme-menu {
+    margin-top: 0;
+    align-self: start;
+    justify-self: center;
   }
 
   .header__theme-menu-list {
-    align-self: start;
-    justify-self: center;
     flex-direction: row;
+  }
+
+  .header__title {
+    margin-top: 0;
+    margin-bottom: 4%;
+    align-self: center;
+  }
+
+  .header__text {
+    margin-top: 2.8%;
+  }
+
+    .content-section-alternative .content-card {
+    grid-column: span 1; 
+    margin: 0; /* на случай, если где-то закрался лишний отступ */
   }
 
   .content-section-alternative {

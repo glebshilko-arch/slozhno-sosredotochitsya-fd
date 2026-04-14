@@ -1,4 +1,5 @@
 .header__rec-label {
+  position: absolute;
   margin-right: 9px;
   min-width: 52px;
   min-height: 26px;

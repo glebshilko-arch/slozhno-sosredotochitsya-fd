@@ -17,6 +17,8 @@
   --font-family: 'IBM Plex Mono';
   --header-footer-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --basic-font-size: 18px;
+  --line-heigt-title: 83%;
+  --line-heigt-text: 1.3;
 }
 
 @media (min-width: 768px) {
