@@ -47,10 +47,6 @@
   .header__rec-label::after {
     display: block;
   }
-
-  .header__theme-menu-list > :nth-child(2) {
-    border: var(--header-element) solid 1px;
-  }
 }
 
 :root.theme-dark {
@@ -74,13 +70,5 @@
 
 :root.theme-dark .header__rec-label::after {
   display: block;
-}
-
-:root.theme-dark .header__theme-menu-list > :nth-child(2) {
-  border: none;
-}
-
-:root.theme-dark .header__theme-menu-list > :nth-child(3) {
-  border: var(--header-element) solid 1px;
 }
 
