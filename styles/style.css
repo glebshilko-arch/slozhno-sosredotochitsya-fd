@@ -39,6 +39,10 @@
   border-width: 0 0 1px 1px;
 }
 
+.header.decorated-zone::after {
+  bottom: 10px;
+}
+
 .header__theme-menu {
   align-self: center;
   display: flex;
@@ -53,7 +57,7 @@
   min-width: 70px;
   min-height: 98px;
   font-family: var(--font-family), monospace;
-  font-size: 18px;
+  font-size: var(--basic-font-size);
   color: var(--header-element);
 }
 
@@ -94,7 +98,7 @@
   font-size: var(--basic-font-size);
   color: var(--content-title-color);
   background-color: var(--container-accent-color);
-  line-height: var(----line-heigt-text);
+  line-height: var(--line-heigt-text);
   font-weight: bold;
   height: min-content;
 }
@@ -123,7 +127,7 @@
   font-family: var(--font-family), monospace;
   font-size: var(--basic-font-size);
   color: var(--section-title-color);
-  line-height: var(----line-heigt-text);
+  line-height: var(--line-heigt-text);
 }
 
 .section__content-text {
@@ -131,7 +135,7 @@
   font-family: var(--font-family), monospace;
   font-size: var(--basic-font-size);
   color: var(--content-text-color);
-  line-height: var(----line-heigt-text);
+  line-height: var(--line-heigt-text);
 }
 
 .section__content-link {
@@ -155,7 +159,7 @@
   font-size: var(--basic-font-size);
   color: var(--content-title-color);
   background-color: var(--container-accent-color);
-  line-height: var(----line-heigt-text);
+  line-height: var(--line-heigt-text);
   font-weight: normal;
 }
 
@@ -182,15 +186,23 @@
   justify-content: center;
 }
 
+.footer.decorated-zone::before {
+  top: 10px;
+}
+
 .footer__title {
   font-family: var(--font-family), monospace;
   font-size: var(--header-footer-title-size);
   color: var(--header-footer-title-color);
   text-shadow: 2px 2px 0 var(--text-shadow);
-  line-height: var(----line-heigt-title);
+  line-height: var(--line-heigt-title);
 }
 
 @media (min-width: 768px) {
+  .header.decorated-zone::after {
+    bottom: 40px;
+  }
+
   .header__theme-menu {
     margin-top: 14%;
   }
@@ -283,6 +295,14 @@
     grid-column: 2/4;
     grid-row: 4;
   }
+
+  .footer.decorated-zone::after {
+    bottom: 20px;
+  }
+
+  .footer.decorated-zone::before {
+    top: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -303,12 +323,11 @@
   }
 
   .header__text {
-    margin-top: 2.8%;
+    margin-top: 3%;
   }
 
-    .content-section-alternative .content-card {
-    grid-column: span 1; 
-    margin: 0; /* на случай, если где-то закрался лишний отступ */
+  .content-section {
+    grid-template-columns: 32.01% 1fr;
   }
 
   .content-section-alternative {
