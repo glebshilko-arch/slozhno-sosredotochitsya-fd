@@ -166,11 +166,6 @@
 }
 
 .section__content-title {
-  font-family: var(--font-family), monospace;
-  font-size: var(--basic-font-size);
-  color: var(--content-title-color);
-  background-color: var(--container-accent-color);
-  line-height: var(--line-heigt-text);
   font-weight: normal;
 }
 
