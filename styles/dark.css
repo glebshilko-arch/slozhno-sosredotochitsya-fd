@@ -36,7 +36,7 @@
     --content-text-color: #F1B2CE;
     --content-title-color: #000028;
     --container-accent-color: #FF0070;
-    --cover-image: url("../images/cover-image-dark.png");  
+    --cover-image: url("../images/cover-image-dark.png");
     --footer-title-color: #DB00FF;
   }
 
@@ -64,7 +64,7 @@
   --content-text-color: #F1B2CE;
   --content-title-color: #000028;
   --container-accent-color: var(--main-element-color);
-  --cover-image: url("../images/cover-image-dark.png");  
+  --cover-image: url("../images/cover-image-dark.png");
   --footer-title-color: #DB00FF;
 }
 
